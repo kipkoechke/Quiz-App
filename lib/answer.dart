@@ -4,7 +4,7 @@ class Answer extends StatelessWidget {
   final VoidCallback selectHandler;
   final String answerText;
 
-  Answer(this.selectHandler, this.answerText);
+  const Answer(this.selectHandler, this.answerText, {super.key});
 
   @override
   Widget build(BuildContext context) {
