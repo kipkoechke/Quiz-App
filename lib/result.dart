@@ -4,7 +4,7 @@ class Result extends StatelessWidget {
   final int resultScore;
   final VoidCallback resetHandler;
 
-  Result(this.resultScore, this.resetHandler);
+  const Result(this.resultScore, this.resetHandler, {super.key});
 
   String get resultPhrase {
     var resultText = 'You did it';
@@ -27,14 +27,14 @@ class Result extends StatelessWidget {
         children: [
           Text(
             resultPhrase,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 36,
               fontWeight: FontWeight.bold,
             ),
           ),
           TextButton(
             onPressed: resetHandler,
-            child: Text(
+            child: const Text(
               'Restart Quiz',
             ),
           ),
